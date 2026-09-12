@@ -1,0 +1,122 @@
+[
+  {
+    "id": "debounce-function",
+    "title": "Debounce function",
+    "description": "Limits the rate at which a function can be called.",
+    "language": "JavaScript",
+    "code": "function debounce(fn, delay) {\n  let timeout;\n  return (...args) => {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => fn(...args), delay);\n  };\n}",
+    "tags": [
+      "utils",
+      "performance"
+    ],
+    "favorite": false,
+    "usageCount": 89,
+    "createdAt": "2026-09-08T09:00:00.000Z",
+    "updatedAt": "2026-09-08T11:00:00.000Z"
+  },
+  {
+    "id": "find-user",
+    "title": "Find user by ID",
+    "description": "Get a user from database.",
+    "language": "PostgreSQL",
+    "code": "SELECT *\nFROM users\nWHERE id = $1;",
+    "tags": [
+      "database",
+      "query"
+    ],
+    "favorite": false,
+    "usageCount": 65,
+    "createdAt": "2026-09-05T10:00:00.000Z",
+    "updatedAt": "2026-09-05T10:00:00.000Z"
+  },
+  {
+    "id": "api-request",
+    "title": "API request",
+    "description": "Simple GET request with error handling.",
+    "language": "Python",
+    "code": "import requests\n\ndef get_data(url):\n    try:\n        response = requests.get(url)\n        response.raise_for_status()\n    except requests.exceptions.RequestException:\n        return None",
+    "tags": [
+      "api",
+      "requests"
+    ],
+    "favorite": false,
+    "usageCount": 58,
+    "createdAt": "2026-09-04T12:00:00.000Z",
+    "updatedAt": "2026-09-12T23:32:50.469Z"
+  },
+  {
+    "id": "player-disconnect",
+    "title": "Player disconnect event",
+    "description": "Example for a FiveM/RageMP server.",
+    "language": "C#",
+    "code": "EventHandlers[\"playerDropped\"] += (player, reason) => {\n  var name = API.GetPlayerName(player);\n  Console.WriteLine($\"{name} left: {reason}\");\n};",
+    "tags": [
+      "game",
+      "event"
+    ],
+    "favorite": false,
+    "usageCount": 37,
+    "createdAt": "2026-08-31T12:00:00.000Z",
+    "updatedAt": "2026-08-31T12:00:00.000Z"
+  },
+  {
+    "id": "sanitize-input",
+    "title": "Sanitize input",
+    "description": "Prevent XSS attacks.",
+    "language": "PHP",
+    "code": "function sanitize($input) {\n  return htmlspecialchars(\n    trim($input),\n    ENT_QUOTES,\n    'UTF-8'\n  );\n}",
+    "tags": [
+      "security",
+      "php"
+    ],
+    "favorite": false,
+    "usageCount": 28,
+    "createdAt": "2026-08-30T12:00:00.000Z",
+    "updatedAt": "2026-08-30T12:00:00.000Z"
+  },
+  {
+    "id": "html-template",
+    "title": "Basic page template",
+    "description": "Simple HTML5 boilerplate.",
+    "language": "HTML",
+    "code": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>App</title>\n  </head>\n  <body></body>\n</html>",
+    "tags": [
+      "frontend",
+      "template"
+    ],
+    "favorite": false,
+    "usageCount": 17,
+    "createdAt": "2026-08-28T12:00:00.000Z",
+    "updatedAt": "2026-08-28T12:00:00.000Z"
+  },
+  {
+    "id": "center-div",
+    "title": "Center a div",
+    "description": "Center an element both vertically and horizontally.",
+    "language": "CSS",
+    "code": ".container {\n  display: grid;\n  place-items: center;\n  min-height: 100vh;\n}",
+    "tags": [
+      "css",
+      "layout"
+    ],
+    "favorite": false,
+    "usageCount": 31,
+    "createdAt": "2026-08-28T12:00:00.000Z",
+    "updatedAt": "2026-08-28T12:00:00.000Z"
+  },
+  {
+    "id": "kill-port",
+    "title": "Kill process by port",
+    "description": "Find and kill a process using a specific port.",
+    "language": "Bash",
+    "code": "lsof -ti :3000 | xargs kill -9",
+    "tags": [
+      "linux",
+      "terminal"
+    ],
+    "favorite": false,
+    "usageCount": 44,
+    "createdAt": "2026-08-26T12:00:00.000Z",
+    "updatedAt": "2026-08-26T12:00:00.000Z"
+  }
+]
